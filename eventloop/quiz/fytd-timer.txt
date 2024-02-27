@@ -1,1 +1,5 @@
 - In eventloop/timer.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+The console log and baz functions will be executed twice first because the foo function is called
+twice in the main thread, after the main thread is complete there are 2 bar functions waiting to be
+executed in the event loop.
